@@ -9,7 +9,7 @@ use Net::IP;
 use POE;
 use vars qw($VERSION);
 
-$VERSION = '1.00';
+$VERSION = '1.02';
 
 sub wake_up {
   my $package = shift;
@@ -127,7 +127,7 @@ It is based on the L<Net::Wake> module by Clinton Wong.
 
 =over
 
-=item wake_up
+=item C<wake_up>
 
 Sends a wake-on-lan packet via UDP. Takes a number of parameters:
 
@@ -174,13 +174,15 @@ Clinton Wong
 
 =head1 LICENSE
 
-Copyright C<(c)> Chris Williams and Clinton Wong.
+Copyright E<copy> Chris Williams and Clinton Wong.
 
 This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
 L<POE>
+
+L<Net::Wake>
 
 L<http://gsd.di.uminho.pt/jpo/software/wakeonlan/mini-howto/>
 

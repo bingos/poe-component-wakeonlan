@@ -1,6 +1,9 @@
 ChangeLog for POE::Component::WakeOnLAN:
 ========================================
 
+1.02	Mon Apr 13 23:07:49 BST 2009
+	- auto set the repository in META.yml
+
 1.00	Fri Sep 19 10:41:55 BST 2008
 	- Only a version update. This deserves a 'stable' release.
 
