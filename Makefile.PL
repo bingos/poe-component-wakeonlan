@@ -10,7 +10,7 @@ perl_version '5.006';
 build_requires 'Test::More' => 0.47;
 requires 'Socket' => 0;
 requires 'IO::Socket::INET' => 0;
-requires 'Net::IP' => 0;
+requires 'Net::IP::Minimal' => 0;
 requires 'POE' => 1.004;
 eval "auto_set_repository";
 WriteAll();

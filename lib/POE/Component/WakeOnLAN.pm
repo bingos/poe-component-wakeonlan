@@ -5,7 +5,7 @@ use warnings;
 use Socket;
 use Carp;
 use IO::Socket::INET;
-use Net::IP;
+use Net::IP::Minimal;
 use POE;
 use vars qw($VERSION);
 
@@ -19,7 +19,7 @@ sub wake_up {
   croak "$package wake_up requires an 'event' parameter\n" unless $params{event};
   $params{macaddr} =~ s/://g;
   $params{port} = 9 unless $params{port} and $params{port} =~ /^\d+$/;
-  $params{address} = '255.255.255.255' unless $params{address} and Net::IP::ip_get_version( $params{address} );
+  $params{address} = '255.255.255.255' unless $params{address} and Net::IP::Minimal::ip_get_version( $params{address} );
   my $options = delete $params{options};
   my $self = bless \%params, $package;
   $self->{session_id} = POE::Session->create(
